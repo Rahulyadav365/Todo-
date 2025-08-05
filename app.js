@@ -465,3 +465,7 @@ class TodoApp {
 
     // ...rest of your methods...
 }
+window.addEventListener('DOMContentLoaded', () => {
+    new TodoApp();
+});
+
