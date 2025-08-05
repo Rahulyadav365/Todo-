@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean and modern to-do list application">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>My To-Do List</h1>
+            <p class="app-subtitle">Stay organized and get things done</p>
+        </header>
+
+        <main class="app-main">
+            <!-- Task Input Section -->
+            <section class="task-input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="form-control task-input" 
+                        placeholder="Add a new task..." 
+                        maxlength="200"
+                        aria-label="New task input"
+                    >
+                    <button 
+                        type="button" 
+                        id="addTaskBtn" 
+                        class="btn btn--primary add-task-btn"
+                        aria-label="Add new task"
+                    >
+                        <span class="btn-icon">+</span>
+                        <span class="btn-text">Add Task</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Task Stats Section -->
+            <section class="task-stats" id="taskStats">
+                <div class="stats-item">
+                    <span class="stats-label">Total:</span>
+                    <span class="stats-value" id="totalTasks">0</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-label">Completed:</span>
+                    <span class="stats-value" id="completedTasks">0</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-label">Remaining:</span>
+                    <span class="stats-value" id="remainingTasks">0</span>
+                </div>
+            </section>
+
+            <!-- Task Actions Section -->
+            <section class="task-actions" id="taskActions">
+                <button 
+                    type="button" 
+                    id="clearCompletedBtn" 
+                    class="btn btn--secondary clear-completed-btn"
+                    disabled
+                >
+                    <span class="btn-icon">🗑️</span>
+                    <span class="btn-text">Clear Completed</span>
+                </button>
+            </section>
+
+            <!-- Tasks List Section -->
+            <section class="tasks-section">
+                <div class="tasks-container" id="tasksContainer">
+                    <!-- Empty state message -->
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon">📝</div>
+                        <h3>No tasks yet</h3>
+                        <p>Add your first task above to get started!</p>
+                    </div>
+                    
+                    <!-- Tasks list -->
+                    <ul class="tasks-list" id="tasksList" aria-live="polite">
+                        <!-- Tasks will be dynamically added here -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2025 My To-Do List. Simple productivity for everyone.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
